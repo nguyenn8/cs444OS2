@@ -98,7 +98,7 @@ sys_getsyscallinfo(void)
   if(numsyscallinfo != -1){
      return numsyscallinfo++;
   }
-  return -1;
+  return numsyscallinfo;
 }   
 
 
