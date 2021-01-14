@@ -5,5 +5,6 @@
 int
 main(void)
 {
-printf("Number of system calls: %d\n", getsyscallinfo());
+  printf(1,"Number of system calls: %d\n", getsyscallinfo());
+  exit();
 }
