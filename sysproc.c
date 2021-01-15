@@ -93,12 +93,12 @@ sys_uptime(void)
 }
 
 int
-sys_getsyscallinfo(void)
+getsyscallinfo(void)
 {
   if(numsyscallinfo == -1){
      return numsyscallinfo;
   }
-  else return numsyscallinfo++;
+  return numsyscallinfo++;
 }   
 
 
