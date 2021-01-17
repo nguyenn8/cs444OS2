@@ -120,7 +120,9 @@ void            userinit(void);
 int             wait(void);
 void            wakeup(void*);
 void            yield(void);
-int             getsyscallinfo(void); 
+//int             getsyscallinfo(void); 
+extern uint     counter;
+
 // swtch.S
 void            swtch(struct context**, struct context*);
 
