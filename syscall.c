@@ -6,7 +6,6 @@
 #include "proc.h"
 #include "x86.h"
 #include "syscall.h"
-int numsyscallinfo2 = -1;
 uint counter;
 
 // User code makes a system call with INT T_SYSCALL.
@@ -135,13 +134,14 @@ static int (*syscalls[])(void) = {
 void
 syscall(void)
 {
-  numsyscallinfo2++;
+  
   int num;
   struct proc *curproc = myproc();
 
   num = curproc->tf->eax;
   if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
     curproc->tf->eax = syscalls[num]();
+    counter++;
   } else {
     cprintf("%d %s: unknown sys call %d\n",
             curproc->pid, curproc->name, num);
