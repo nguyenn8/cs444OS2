@@ -7,7 +7,9 @@
 #include "mmu.h"
 #include "proc.h"
 
-int numsyscallinfo = -1;
+//int numsyscallinfo = -1;
+//uint counter;
+
 
 int
 sys_fork(void)
@@ -93,12 +95,12 @@ sys_uptime(void)
 }
 
 int
-getsyscallinfo(void)
+sys_getsyscallinfo(void)
 {
-  if(numsyscallinfo != -1){
-     return numsyscallinfo++;
+  if(counter != -1){
+     return counter++;
   }
-  return numsyscallinfo;
+  return counter;
 }   
 
 
