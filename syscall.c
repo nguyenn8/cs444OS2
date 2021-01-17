@@ -6,6 +6,7 @@
 #include "proc.h"
 #include "x86.h"
 #include "syscall.h"
+//extern uint     counter;
 uint counter;
 
 // User code makes a system call with INT T_SYSCALL.
