@@ -120,7 +120,6 @@ void            userinit(void);
 int             wait(void);
 void            wakeup(void*);
 void            yield(void);
-extern uint     counter;
 
 // swtch.S
 void            swtch(struct context**, struct context*);
@@ -149,6 +148,7 @@ int             strlen(const char*);
 int             strncmp(const char*, const char*, uint);
 char*           strncpy(char*, const char*, int);
 
+extern uint     counter;
 // syscall.c
 int             argint(int, int*);
 int             argptr(int, char**, int);
