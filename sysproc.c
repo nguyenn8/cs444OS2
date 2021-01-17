@@ -97,9 +97,10 @@ sys_uptime(void)
 int
 sys_getsyscallinfo(void)
 {
-  if(counter != -1){
-     return counter++;
-  }
+ // while(counter != -1){
+   //  counter++;
+    // return counter;
+  //}
   return counter;
 }   
 
