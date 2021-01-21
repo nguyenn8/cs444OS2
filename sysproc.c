@@ -9,7 +9,6 @@
 
 uint counter;
 
-
 int
 sys_fork(void)
 {
@@ -100,3 +99,12 @@ sys_getsyscallinfo(void)
 }   
 
 
+int 
+sys_settickets(void){
+ int num;
+ if(argint(0, &n) < 0){
+  return -1;
+  }
+ proc->tickets = num;
+ return num;
+}
